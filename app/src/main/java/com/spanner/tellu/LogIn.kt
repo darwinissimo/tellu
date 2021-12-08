@@ -1,5 +1,6 @@
 package com.spanner.tellu
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
@@ -24,7 +25,7 @@ class LogIn : AppCompatActivity() {
         btnSignUp = findViewById(R.id.btnSignUp)
 
         btnSignUp.setOnClickListener {
-            val intent = Itent(this, SignUp::class.java) // evento na classe SignUp
+            val intent = Intent(this, SignUp::class.java) // evento na classe SignUp
             startActivity(intent)
         }
     }
