@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import javax.security.auth.login.LoginException
 
@@ -42,6 +43,16 @@ class LogIn : AppCompatActivity() {
     }
 
     private fun login(email: String, password: String) {
+        mAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // code for login user
+                    val intent = Intent(this@LogIn, MainActivity::class.java)
+                    startActivity(intent)
 
+                } else {
+                    Toast.makeText(this@LogIn, "Usuário não encontrado", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }
