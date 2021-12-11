@@ -38,7 +38,7 @@ class SignUp : AppCompatActivity() {
             val email = edtEmail.text.toString()
             val password = edtPassword.text.toString()
 
-            signUp(email, password)
+            signUp(name, email, password)
         }
     }
 
