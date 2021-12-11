@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.EditText
+import com.google.firebase.auth.FirebaseAuth
 import javax.security.auth.login.LoginException
 
 class LogIn : AppCompatActivity() {
@@ -15,9 +16,13 @@ class LogIn : AppCompatActivity() {
     private lateinit var btnLogin: Button
     private lateinit var btnSignUp: Button
 
+    private lateinit var mAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
+
+        mAuth = FirebaseAuth.getInstance()
 
         edtEmail = findViewById(R.id.edt_email)
         edtPassword = findViewById(R.id.edt_password)
@@ -28,5 +33,16 @@ class LogIn : AppCompatActivity() {
             val intent = Intent(this, SignUp::class.java) // evento na classe SignUp
             startActivity(intent)
         }
+
+        btnLogin.setOnClickListener {
+            val email = edtEmail.text.toString()
+            val password = edtPassword.text.toString()
+
+            login(email, password)
+        }
+    }
+
+    private fun login(email: String, password: String) {
+
     }
 }
