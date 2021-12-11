@@ -50,6 +50,7 @@ class SignUp : AppCompatActivity() {
                     // code for jumping to home
                     addUserDb(name, email, mAuth.currentUser?.uid!!)
                     val intent = Intent(this@SignUp, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
 
                 } else {

@@ -1,5 +1,6 @@
 package com.spanner.tellu
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -33,8 +34,10 @@ class MainActivity : AppCompatActivity() {
         if(item.itemId == R.id.logout) {
             // write the logic for logout
             mAuth.signOut()
-            finish()
+            val intent = Intent(this@MainActivity, LogIn::class.java)
 
+            finish()
+            startActivity(intent)
             return true
         }
         return true
