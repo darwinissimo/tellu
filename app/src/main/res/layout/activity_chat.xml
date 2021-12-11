@@ -34,13 +34,13 @@
             android:paddingLeft="15dp"
             android:background="@drawable/message_box_background"
             android:layout_weight="90"/>
-        
-        <androidx.constraintlayout.utils.widget.ImageFilterView
+
+        <ImageView
+            android:id="@+id/sentButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/send1"
             android:layout_weight="10" />
-
 
     </LinearLayout>
 
