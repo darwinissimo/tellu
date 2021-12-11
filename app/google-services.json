@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "971865286472",
+    "project_id": "tellu-chat",
+    "storage_bucket": "tellu-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971865286472:android:a6ed5401c41e38bfe3357d",
+        "android_client_info": {
+          "package_name": "com.spanner.tellu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971865286472-fanur50pu2qksbmd0sook6luc9m60m51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIKZFsG-RvazFPTOTntejR3v5kD6lz5xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971865286472-fanur50pu2qksbmd0sook6luc9m60m51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
